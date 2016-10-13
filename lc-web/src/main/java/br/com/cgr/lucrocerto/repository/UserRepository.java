@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import br.com.cgr.lucrocerto.entity.UserEntity;
+import br.com.cgr.lucrocerto.model.UserStatus;
 
 public interface UserRepository extends CrudRepository<UserEntity, String> {
 
@@ -16,9 +17,13 @@ public interface UserRepository extends CrudRepository<UserEntity, String> {
 
 	List<UserEntity> findAll(Sort sort);
 
-	@Query("select name from UserEntity u")
+	@Query("select u.name from UserDataEntity u")
 	Page<String> findAllNames(Pageable pageable);
 
-	@Query("select u.name, u.pwd from UserEntity u where u.name = ?1")
-	String[] findByName(String name);
+	@Query("select u.email, u.pwd, u.status from UserEntity u where u.email = ?1")
+	String[] findByEmail(String name);
+
+	@Query("select u.status from UserEntity u where u.email = ?1")
+	UserStatus getStatus(String email);
+
 }

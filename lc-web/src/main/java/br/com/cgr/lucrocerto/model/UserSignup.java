@@ -2,7 +2,7 @@ package br.com.cgr.lucrocerto.model;
 
 public class UserSignup {
 	private User user;
-	private String confirmName;
+	private String confirmEmail;
 	private String confirmPwd;
 
 	public User getUser() {
@@ -13,12 +13,12 @@ public class UserSignup {
 		this.user = user;
 	}
 
-	public String getConfirmName() {
-		return confirmName;
+	public String getConfirmEmail() {
+		return confirmEmail;
 	}
 
-	public void setConfirmName(String confirmName) {
-		this.confirmName = confirmName;
+	public void setConfirmEmail(String confirmEmail) {
+		this.confirmEmail = confirmEmail;
 	}
 
 	public String getConfirmPwd() {

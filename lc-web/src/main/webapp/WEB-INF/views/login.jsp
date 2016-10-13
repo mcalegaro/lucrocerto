@@ -13,6 +13,7 @@
 <link href="<c:url value="resources/global.css"/>" rel="stylesheet" />
 </head>
 <body>
+	<h1>Lucro Certo!</h1>
 	<c:url value="/login" var="loginUrl" />
 	<c:url value="/showSignup" var="registerUrl" />
 	<div id="divLogin">

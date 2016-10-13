@@ -13,36 +13,36 @@
 <title>Lucro Certo</title>
 </head>
 <body>
+	<h1>Lucro Certo!</h1>
 	<c:url value="/signup" var="signup" />
 	<div>
 		<f:form action="${signup}" method="POST" modelAttribute="userSignup">
 			<table border="0">
 				<tr>
-					<td><label for="username">Username:</label></td>
-					<td><f:input type="text" id="username" name="username"
-							path="user.name" class="form-control" /></td>
+					<td><label for="email">e-mail:</label></td>
+					<td><f:input type="text" id="email" name="email"
+							path="user.email" class="form-control" />${validateEmail}</td>
 				</tr>
 				<tr>
-					<td><label for="usernameConfirm">Confirm Username:</label></td>
-					<td><f:input type="text" id="usernameConfirm"
-							name="usernameConfirm" path="confirmName" class="form-control" /></td>
+					<td><label for="confirmEmail">Confirme o e-mail:</label></td>
+					<td><f:input type="text" id="confirmEmail" name="confirmEmail"
+							path="confirmEmail" class="form-control" /></td>
 				</tr>
 				<tr>
-					<td><label for="password">Password:</label></td>
+					<td><label for="password">Senha:</label></td>
 					<td><f:input type="password" id="password" name="password"
 							path="user.pwd" class="form-control" /></td>
 				</tr>
 				<tr>
-					<td><label for="password">Confirmm Password:</label></td>
+					<td><label for="password">Confirme a senha:</label></td>
 					<td><f:input type="password" id="passwordConfirm"
 							name="passwordConfirm" path="confirmPwd" class="form-control" /></td>
 				</tr>
 				<tr>
 					<td><c:url value="/" var="backUrl" /> <a href="${backUrl}"
-						class="btn btn-primary" role="button">Back</a></td>
+						class="btn btn-primary" role="button">Voltar</a></td>
 					<td>
-						<button type="submit" class="btn btn-success"
-							style="width: 100%;">OK</button>
+						<button type="submit" class="btn btn-success" style="width: 100%;">Confirmar</button>
 					</td>
 				</tr>
 			</table>

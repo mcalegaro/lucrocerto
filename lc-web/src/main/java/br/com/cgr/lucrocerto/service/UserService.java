@@ -1,5 +1,6 @@
 package br.com.cgr.lucrocerto.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.domain.Pageable;
@@ -13,9 +14,14 @@ public interface UserService {
 
 	List<String> getNames(Pageable pageable);
 
-	User getNameAndPwd(String name);
+	User getEmailAndPwd(String name);
 
-	User findByName(String username);
+	User findByEmail(String email);
 
 	User createUser(UserSignup userSignup);
+
+	String buildConfirmationKey(Date date, String email);
+
+	String confirm(String email, String key);
+
 }

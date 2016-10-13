@@ -1,4 +1,4 @@
-package br.com.cgr.lucrocerto.service.impl;
+package br.com.cgr.lucrocerto.service.providers;
 
 import org.springframework.stereotype.Service;
 

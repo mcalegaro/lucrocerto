@@ -1,4 +1,4 @@
-package br.com.cgr.lucrocerto.conf;
+package br.com.cgr.lucrocerto.conf.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

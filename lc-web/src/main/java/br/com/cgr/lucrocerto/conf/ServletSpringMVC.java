@@ -2,6 +2,8 @@ package br.com.cgr.lucrocerto.conf;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+import br.com.cgr.lucrocerto.conf.security.SecurityConfigExt;
+
 public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
